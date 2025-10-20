@@ -58,10 +58,10 @@ python -m pepwiz.gui
 
 If you only work with .mzML or .mzXML, skip this section.
 
-Step 1 — Install ProteoWizard
+- Step 1 — Install ProteoWizard
 	Download from: https://proteowizard.sourceforge.io/download.html
 
-Step 2 — Find the real msconvert.exe
+- Step 2 — Find the real msconvert.exe
 Don’t use the GUI shortcut (MSConvertGUI_Icon.exe).
 
 You need the command-line binary.
@@ -72,7 +72,7 @@ You need the command-line binary.
 ```powershell
 	Get-ChildItem "$env:LOCALAPPDATA","$env:ProgramFiles","$env:ProgramFiles(x86)" -Recurse -Filter msconvert.exe -ErrorAction SilentlyContinue | Select-Object -First 1 -ExpandProperty FullName
 ```
-Step 3 — Register the path
+- Step 3 — Register the path
 ```cmd
 	setx PEPWIZ_MS_CONVERT "C:\Program Files\ProteoWizard\msconvert.exe"
 ```
@@ -130,7 +130,6 @@ pytest -q
 	```cmd
 		where /r C:\ msconvert.exe
 ```
-
 3. Register path
 	```cmd
 		setx PEPWIZ_MS_CONVERT "C:\path\to\msconvert.exe"
@@ -139,17 +138,17 @@ pytest -q
 
 "msconvert failed or DLL error"
 
-1. Reinstall full ProteoWizard CLI (not GUI-only).
+- Reinstall full ProteoWizard CLI (not GUI-only).
 	
-2. Ensure you reference msconvert.exe, not MSConvertGUI_Icon.exe.
+- Ensure you reference msconvert.exe, not MSConvertGUI_Icon.exe.
 
 "GUI not opening"
 
-1. Python ≥ 3.10
+- Python ≥ 3.10
 
-2. tkinter installed (default on Windows)
+- tkinter installed (default on Windows)
 
-3. Run via terminal:
+- Run via terminal:
 ```cmd
 		python -m pepwiz.gui
 ```
@@ -178,9 +177,9 @@ pytest -q
 	
 ### 👩‍🔬 Contributors & Contact
 
-Sanath Raj Kavuthian Kandy — Concept, design, GUI development, optimization, validation
+- Sanath Raj Kavuthian Kandy — Concept, design, GUI development, optimization, validation
 
-Jonathan Chekan — Concept, validation
+- Jonathan Chekan — Concept, validation
 
 📧 sanathrajkk1@gmail.com
 Feedback and pull requests welcome!
