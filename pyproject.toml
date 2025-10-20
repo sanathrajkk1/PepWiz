@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pepwiz"
+version = "0.1.0"
+description = "PepWiz — GUI-based peptide MS/MS data processing and visualization"
+authors = [{ name = "Sanath Raj Kavuthian Kandy", email = "s_kavuthian@uncg.edu" }]
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["mass spectrometry", "proteomics", "peptide", "MS/MS", "GUI"]
+dependencies = [
+  "matplotlib>=3.7",
+  "numpy>=1.24",
+  "pyteomics>=4.6",
+  "lxml>=4.9"
+]
+
+[project.scripts]
+pepwiz-gui = "pepwiz.gui:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
