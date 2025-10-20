@@ -28,24 +28,35 @@ ProteoWizard’s `msconvert` is optional but required if you plan to open vendor
 
 ```bash
 pip install git+https://github.com/sanathrajkk1/PepWiz.git
-
+```
 Then launch:
-
+```bash
 python -m pepwiz.gui
+```
 
 ### 🟢 Option 2 — Local install (manual or offline setup)
-
+```bash
 git clone https://github.com/sanathrajkk1/PepWiz.git
+```
+```bash
 cd pepwizard
+```
+```bash
 pip install .
-
-(For development)
-
+```
+#(For development)
+```bash
 python -m venv .venv
+```
+```bash
 .\.venv\Scripts\activate
+```
+```bash
 pip install -e .[io]
+```
+```bash
 python -m pepwiz.gui
-
+```
 ---
 
 ### ⚙️ ProteoWizard Setup (for .RAW files)
@@ -60,25 +71,27 @@ Don’t use the GUI shortcut (MSConvertGUI_Icon.exe).
 
 You need the command-line binary.
 
-Command Prompt
+```cmd
 	where /r C:\ msconvert.exe
-
-PowerShell
+```
+```powershell
 	Get-ChildItem "$env:LOCALAPPDATA","$env:ProgramFiles","$env:ProgramFiles(x86)" -Recurse -Filter msconvert.exe -ErrorAction SilentlyContinue | Select-Object -First 1 -ExpandProperty FullName
-
+```
 Step 3 — Register the path
+```bash
 	setx PEPWIZ_MS_CONVERT "C:\Program Files\ProteoWizard\msconvert.exe"
-
+```
 (Replace with your actual path.)
 Restart your terminal — PepWiz will detect it automatically.
 
 ---
 
-🚀 Using PepWiz
+### 🚀 Using PepWiz
 
 Launch:
+```bash
 	python -m pepwiz.gui
-
+```
 Workflow:
 
     1. Open MS File → choose .raw, .mzML, or .mzXML
@@ -101,7 +114,8 @@ Outputs:
 
 ---
 
-## 🧪 Developer & Contributor Setup
+### 🧪 Developer & Contributor Setup
+```cmd
 
 git clone https://github.com/sanathrajkk1/PepWiz.git
 cd pepwizard
@@ -109,21 +123,23 @@ python -m venv .venv
 .\.venv\Scripts\activate
 pip install -e .[io]
 pytest -q
-
+```
 ---
 
-🧠 Troubleshooting
+### 🧠 Troubleshooting
 
 "PepWiz can’t find msconvert"
 
     1. Install ProteoWizard
 
     2. Find binary
+	```cmd
 		where /r C:\ msconvert.exe
-
+```
 	3. Register path
+	```cmd
 		setx PEPWIZ_MS_CONVERT "C:\path\to\msconvert.exe"
-
+```
     4. Restart and rerun PepWiz.
 
 "msconvert failed or DLL error"
@@ -139,12 +155,12 @@ pytest -q
     2. tkinter installed (default on Windows)
 
     3. Run via terminal:
-
+```cmd
 		python -m pepwiz.gui
-
+```
 ---
 
-## 🧬 Example Run
+### 🧬 Example Run
 
     1. Convert or download a small .mzML file 
 
@@ -164,7 +180,7 @@ pytest -q
 	
 ---
 	
-## 👩‍🔬 Contributors & Contact
+### 👩‍🔬 Contributors & Contact
 
 Sanath Raj Kavuthian Kandy — Concept, design, GUI development, optimization, validation
 Jonathan Chekan — Concept, validation
@@ -174,11 +190,15 @@ Feedback and pull requests welcome!
 
 ---
 
-## 📚 Citation
+### 📚 Citation
 
     xxxxxxx
 
-## ⚖️ License
+---
+
+### ⚖️ License
 
 This project is licensed under the MIT License.
 See LICENSE for full details.
+
+---
