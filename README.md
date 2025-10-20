@@ -2,7 +2,7 @@
 **A GUI-based peptide MS/MS processing and visualization tool**
 
 PepWiz helps you process peptide mass spectrometry (MS/MS) data with ease — no coding required.  
-Provide a peptide sequence and your RAW or mzML file, and PepWiz will automatically convert, filter, match, and visualize fragments, generating clean, editable figures for papers or presentations.
+Provide a peptide sequence and your RAW or mzML/mzXML file, and PepWiz will automatically convert, filter, match, and visualize fragments, generating clean, editable figures for papers or presentations.
 
 ---
 
@@ -37,24 +37,19 @@ python -m pepwiz.gui
 ### 🟢 Option 2 — Local install (manual or offline setup)
 ```bash
 git clone https://github.com/sanathrajkk1/PepWiz.git
-```
-```bash
+
 cd pepwizard
-```
-```bash
+
 pip install .
 ```
 #(For development)
 ```bash
 python -m venv .venv
-```
-```bash
+
 .\.venv\Scripts\activate
-```
-```bash
+
 pip install -e .[io]
-```
-```bash
+
 python -m pepwiz.gui
 ```
 ---
@@ -117,20 +112,10 @@ Outputs:
 ### 🧪 Developer & Contributor Setup
 ```cmd
 git clone https://github.com/sanathrajkk1/PepWiz.git
-```
-```cmd
 cd pepwiz
-```
-```cmd
 python -m venv .venv
-```
-```cmd
 .\.venv\Scripts\activate
-```
-```cmd
 pip install -e .[io]
-```
-```cmd
 pytest -q
 ```
 ---
@@ -145,6 +130,7 @@ pytest -q
 	```cmd
 		where /r C:\ msconvert.exe
 ```
+
 3. Register path
 	```cmd
 		setx PEPWIZ_MS_CONVERT "C:\path\to\msconvert.exe"
