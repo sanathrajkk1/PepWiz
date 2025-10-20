@@ -127,11 +127,11 @@ pytest -q
 1. Install ProteoWizard
 
 2. Find binary
-	```cmd
+```cmd
 		where /r C:\ msconvert.exe
 ```
 3. Register path
-	```cmd
+```cmd
 		setx PEPWIZ_MS_CONVERT "C:\path\to\msconvert.exe"
 ```
 4. Restart and rerun PepWiz.
@@ -169,9 +169,9 @@ pytest -q
         PPM: 10
         Charge: 2
 
-    4. Click Run
+4. Click Run
 
-	5. Outputs will appear in the same folder.
+5. Outputs will appear in the same folder.
 	
 ---
 	
