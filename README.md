@@ -78,7 +78,7 @@ You need the command-line binary.
 	Get-ChildItem "$env:LOCALAPPDATA","$env:ProgramFiles","$env:ProgramFiles(x86)" -Recurse -Filter msconvert.exe -ErrorAction SilentlyContinue | Select-Object -First 1 -ExpandProperty FullName
 ```
 Step 3 — Register the path
-```bash
+```cmd
 	setx PEPWIZ_MS_CONVERT "C:\Program Files\ProteoWizard\msconvert.exe"
 ```
 (Replace with your actual path.)
@@ -89,22 +89,22 @@ Restart your terminal — PepWiz will detect it automatically.
 ### 🚀 Using PepWiz
 
 Launch:
-```bash
+```cmd
 	python -m pepwiz.gui
 ```
 Workflow:
 
-    1. Open MS File → choose .raw, .mzML, or .mzXML
+1. Open MS File → choose .raw, .mzML, or .mzXML
 
-    2. Enter your peptide sequence
+2. Enter your peptide sequence
 
-    3. Adjust:
+3. Adjust:
 
         PPM tolerance
         Charge states
         Optional RT window
 
-    4. Click Run and monitor logs
+4. Click Run and monitor logs
 
 Outputs:
 
@@ -116,12 +116,21 @@ Outputs:
 
 ### 🧪 Developer & Contributor Setup
 ```cmd
-
 git clone https://github.com/sanathrajkk1/PepWiz.git
-cd pepwizard
+```
+```cmd
+cd pepwiz
+```
+```cmd
 python -m venv .venv
+```
+```cmd
 .\.venv\Scripts\activate
+```
+```cmd
 pip install -e .[io]
+```
+```cmd
 pytest -q
 ```
 ---
@@ -130,31 +139,31 @@ pytest -q
 
 "PepWiz can’t find msconvert"
 
-    1. Install ProteoWizard
+1. Install ProteoWizard
 
-    2. Find binary
+2. Find binary
 	```cmd
 		where /r C:\ msconvert.exe
 ```
-	3. Register path
+3. Register path
 	```cmd
 		setx PEPWIZ_MS_CONVERT "C:\path\to\msconvert.exe"
 ```
-    4. Restart and rerun PepWiz.
+4. Restart and rerun PepWiz.
 
 "msconvert failed or DLL error"
 
-	1. Reinstall full ProteoWizard CLI (not GUI-only).
+1. Reinstall full ProteoWizard CLI (not GUI-only).
 	
-	2. Ensure you reference msconvert.exe, not MSConvertGUI_Icon.exe.
+2. Ensure you reference msconvert.exe, not MSConvertGUI_Icon.exe.
 
 "GUI not opening"
 
-    1. Python ≥ 3.10
+1. Python ≥ 3.10
 
-    2. tkinter installed (default on Windows)
+2. tkinter installed (default on Windows)
 
-    3. Run via terminal:
+3. Run via terminal:
 ```cmd
 		python -m pepwiz.gui
 ```
@@ -162,13 +171,14 @@ pytest -q
 
 ### 🧬 Example Run
 
-    1. Convert or download a small .mzML file 
+1. Convert or download a small .mzML file 
 
-	2. Run:
-
+2. Run:
+```cmd
 		python -m pepwiz.gui
+```		
 
-    3. Parameters:
+3. Parameters:
 
         Sequence: "PEPTIDE"
         PPM: 10
@@ -183,6 +193,7 @@ pytest -q
 ### 👩‍🔬 Contributors & Contact
 
 Sanath Raj Kavuthian Kandy — Concept, design, GUI development, optimization, validation
+
 Jonathan Chekan — Concept, validation
 
 📧 sanathrajkk1@gmail.com
@@ -192,7 +203,7 @@ Feedback and pull requests welcome!
 
 ### 📚 Citation
 
-    xxxxxxx
+    
 
 ---
 
