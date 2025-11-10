@@ -11,7 +11,8 @@ Provide a peptide sequence and your RAW or mzML/mzXML file, and PepWiz will auto
 - 🧬 **Automatic b/y fragment matching** — theoretical vs. observed peaks  
 - ⚙️ **ProteoWizard integration** — optional RAW → mzML conversion via `msconvert`  
 - 🎨 **Publication-ready visuals** — editable SVG fragment map & annotated spectrum  
-- 🪄 **Intuitive GUI** — one-click processing, no scripts needed  
+- 🪄 **Intuitive GUI** — one-click processing, no scripts needed 
+- 🧩 **Terminal modification options** — dropdown menu for C-terminal variants (Amidated, Dehydrated, etc.)
 - 💾 **Exports**
   - `*.out` — text summary  
   - `*.fragments.svg` — sequence coverage map  
