@@ -1,8 +1,11 @@
 # PepWiz 🧪  
 **A GUI-based peptide MS/MS processing and visualization tool**
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17991953.svg)](https://doi.org/10.5281/zenodo.17991953)
+
 PepWiz helps you process peptide mass spectrometry (MS/MS) data with ease — no coding required.  
 Provide a peptide sequence and your RAW or mzML/mzXML file, and PepWiz will automatically convert, filter, match, and visualize fragments, generating clean, editable figures for papers or presentations.
+PepWiz is archived on Zenodo and is fully citable via DOI.
 
 ---
 
@@ -39,7 +42,7 @@ python -m pepwiz.gui
 ```bash
 git clone https://github.com/sanathrajkk1/PepWiz.git
 
-cd pepwizard
+cd PepWiz
 
 pip install .
 ```
@@ -182,14 +185,15 @@ pytest -q
 
 - Jonathan Chekan — Concept, validation
 
-📧 sanathrajkk1@gmail.com
-Feedback and pull requests welcome!
+For questions, issues, or feature requests, please open a GitHub issue.
 
 ---
 
 ### 📚 Citation
 
-    
+If you use PepWiz in your work, please cite:
+
+Kandy, S. K., & Chekan, J. R. (2025). *PepWiz: A GUI-based peptide MS/MS processing and visualization tool* (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.17991953
 
 ---
 
