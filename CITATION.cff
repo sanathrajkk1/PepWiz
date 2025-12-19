@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: PepWiz
+version: 1.0.0
+doi: 10.5281/zenodo.17991953
+authors:
+  - family-names: Kandy
+    given-names: Sanath Raj Kavuthian
+    name-particle: ""
+  - family-names: Chekan
+    given-names: Jonathan Rodi
